@@ -1,0 +1,10 @@
+FROM busybox
+
+MAINTAINER Pritish <pritishparihar@gmail.com> 
+
+ADD index.html /www/html/index.html
+
+EXPOSE 8000
+
+
+CMD httpd -p 8000 -h /www/html ; tail -f /dev/null
